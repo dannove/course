@@ -12,6 +12,8 @@ struct C {
 };
 
 int main() {
+    // make_unique<C>(...)可以理解为等价于new C(...)
+    // 括号里也可以有其他构造函数的参数
     std::unique_ptr<C> p = std::make_unique<C>();
 
     if (1 + 1 == 2) {

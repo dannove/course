@@ -23,5 +23,6 @@ int main() {
     printf("移交前：%p\n", p.get());  // 不为 null
     func(std::move(p));    // 通过移动构造函数，转移指针控制权
     printf("移交后：%p\n", p.get());  // null，因为移动会清除原对象
+    printf("obj: %p\n", objlist[0].get());
     return 0;
 }
